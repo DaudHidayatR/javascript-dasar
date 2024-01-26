@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    const nilaiUjian = 90;
+    const nilaiAbsensi = 90;
+
+    const lulusUjian = nilaiUjian > 75;
+    document.writeln(lulusUjian);
+    const lulusAbsensi = nilaiAbsensi > 75;
+    document.writeln(lulusAbsensi);
+
+    const lulus = lulusUjian && lulusAbsensi;
+    document.writeln(lulus);
+</script>
+</body>
+</html>
