@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    console.info(0 || 1); // 1
+    console.info("" || []); // []
+    console.info(0 || "Hello"); // Hello
+    console.info(0 || []); // []
+    console.info(0 || {}); // {}
+    console.info(null || "Null");
+    console.info(undefined || "Undefined");
+
+    const person = {
+        name: "Daud",
+        address: "",
+        age: undefined
+    };
+    console.info(person.name || person.address); // Daud
+
+//     and operator
+    console.info(0 && 1); // 0
+    console.info("" && []); // ""
+    console.info(0 && "Hello"); // 0
+    console.info(0 && []); // 0
+    console.info(0 && {}); // 0
+    console.info(null && "Null"); // null
+    console.info(undefined && "Undefined"); // undefined
+    console.info(person.name && person.address); // ""
+    console.info(person.name && person.age); // undefined
+    console.info(person.address && person.age); // undefined
+    console.info(person.age && person.address); // undefined
+    console.info(person.age && person.name); // undefined
+    console.info(person.address && person.name); // undefined
+</script>
+</body>
+</html>
